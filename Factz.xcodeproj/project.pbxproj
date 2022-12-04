@@ -13,7 +13,38 @@
 		3C340917293C990C0048F155 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340916293C990C0048F155 /* FactViewModel.swift */; };
 		3C340919293CA0CE0048F155 /* FactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340918293CA0CE0048F155 /* FactView.swift */; };
 		3C34091D293CD05B0048F155 /* FactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34091C293CD05B0048F155 /* FactAPI.swift */; };
+		3C340925293CD4300048F155 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C340924293CD4300048F155 /* WidgetKit.framework */; };
+		3C340927293CD4300048F155 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C340926293CD4300048F155 /* SwiftUI.framework */; };
+		3C34092A293CD4300048F155 /* FactBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340929293CD4300048F155 /* FactBundle.swift */; };
+		3C34092C293CD4300048F155 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34092B293CD4300048F155 /* Fact.swift */; };
+		3C34092E293CD4310048F155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C34092D293CD4310048F155 /* Assets.xcassets */; };
+		3C340932293CD4310048F155 /* FactExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C340922293CD4300048F155 /* FactExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C34093C293D33350048F155 /* FactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34091C293CD05B0048F155 /* FactAPI.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C340930293CD4310048F155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3408FB293C974E0048F155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C340921293CD4300048F155;
+			remoteInfo = FactExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C340936293CD4310048F155 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3C340932293CD4310048F155 /* FactExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C340903293C974E0048F155 /* Factz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +54,13 @@
 		3C340916293C990C0048F155 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		3C340918293CA0CE0048F155 /* FactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactView.swift; sourceTree = "<group>"; };
 		3C34091C293CD05B0048F155 /* FactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactAPI.swift; sourceTree = "<group>"; };
+		3C340922293CD4300048F155 /* FactExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FactExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C340924293CD4300048F155 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3C340926293CD4300048F155 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3C340929293CD4300048F155 /* FactBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactBundle.swift; sourceTree = "<group>"; };
+		3C34092B293CD4300048F155 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		3C34092D293CD4310048F155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C34092F293CD4310048F155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +71,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C34091F293CD4300048F155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C340927293CD4300048F155 /* SwiftUI.framework in Frameworks */,
+				3C340925293CD4300048F155 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -40,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				3C340905293C974E0048F155 /* Factz */,
+				3C340928293CD4300048F155 /* Fact */,
+				3C340923293CD4300048F155 /* Frameworks */,
 				3C340904293C974E0048F155 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3C340903293C974E0048F155 /* Factz.app */,
+				3C340922293CD4300048F155 /* FactExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +123,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3C340923293CD4300048F155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C340924293CD4300048F155 /* WidgetKit.framework */,
+				3C340926293CD4300048F155 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C340928293CD4300048F155 /* Fact */ = {
+			isa = PBXGroup;
+			children = (
+				3C340929293CD4300048F155 /* FactBundle.swift */,
+				3C34092B293CD4300048F155 /* Fact.swift */,
+				3C34092D293CD4310048F155 /* Assets.xcassets */,
+				3C34092F293CD4310048F155 /* Info.plist */,
+			);
+			path = Fact;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,15 +153,34 @@
 				3C3408FF293C974E0048F155 /* Sources */,
 				3C340900293C974E0048F155 /* Frameworks */,
 				3C340901293C974E0048F155 /* Resources */,
+				3C340936293CD4310048F155 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C340931293CD4310048F155 /* PBXTargetDependency */,
 			);
 			name = Factz;
 			productName = Factz;
 			productReference = 3C340903293C974E0048F155 /* Factz.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3C340921293CD4300048F155 /* FactExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C340933293CD4310048F155 /* Build configuration list for PBXNativeTarget "FactExtension" */;
+			buildPhases = (
+				3C34091E293CD4300048F155 /* Sources */,
+				3C34091F293CD4300048F155 /* Frameworks */,
+				3C340920293CD4300048F155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FactExtension;
+			productName = FactExtension;
+			productReference = 3C340922293CD4300048F155 /* FactExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -104,6 +193,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					3C340902293C974E0048F155 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					3C340921293CD4300048F155 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -122,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				3C340902293C974E0048F155 /* Factz */,
+				3C340921293CD4300048F155 /* FactExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +226,14 @@
 			files = (
 				3C34090E293C974F0048F155 /* Preview Assets.xcassets in Resources */,
 				3C34090B293C974F0048F155 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C340920293CD4300048F155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C34092E293CD4310048F155 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +251,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C34091E293CD4300048F155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C34093C293D33350048F155 /* FactAPI.swift in Sources */,
+				3C34092A293CD4300048F155 /* FactBundle.swift in Sources */,
+				3C34092C293CD4300048F155 /* Fact.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C340931293CD4310048F155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C340921293CD4300048F155 /* FactExtension */;
+			targetProxy = 3C340930293CD4310048F155 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3C34090F293C974F0048F155 /* Debug */ = {
@@ -270,6 +389,7 @@
 		3C340912293C974F0048F155 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +419,7 @@
 		3C340913293C974F0048F155 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -325,6 +446,60 @@
 			};
 			name = Release;
 		};
+		3C340934293CD4310048F155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fact;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.Factz.Fact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C340935293CD4310048F155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fact;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.Factz.Fact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +517,15 @@
 			buildConfigurations = (
 				3C340912293C974F0048F155 /* Debug */,
 				3C340913293C974F0048F155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C340933293CD4310048F155 /* Build configuration list for PBXNativeTarget "FactExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C340934293CD4310048F155 /* Debug */,
+				3C340935293CD4310048F155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

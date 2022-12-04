@@ -7,10 +7,10 @@
 
 import Foundation
 
-final class FactViewModel: ObservableObject {
+final public class FactViewModel: ObservableObject {
 	@Published var fact: String? = nil
 
-	@MainActor func getFact() {
+	public func getFact() {
 		Task {
 			do {
 				fact = try await FactApi.fetchFact()
