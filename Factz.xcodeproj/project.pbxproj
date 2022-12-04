@@ -19,6 +19,7 @@
 		3C34092C293CD4300048F155 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34092B293CD4300048F155 /* Fact.swift */; };
 		3C34092E293CD4310048F155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C34092D293CD4310048F155 /* Assets.xcassets */; };
 		3C340932293CD4310048F155 /* FactExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C340922293CD4300048F155 /* FactExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C34093C293D33350048F155 /* FactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34091C293CD05B0048F155 /* FactAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C34093C293D33350048F155 /* FactAPI.swift in Sources */,
 				3C34092A293CD4300048F155 /* FactBundle.swift in Sources */,
 				3C34092C293CD4300048F155 /* Fact.swift in Sources */,
 			);

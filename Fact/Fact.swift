@@ -9,61 +9,65 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
-    }
+	func placeholder(in context: Context) -> SimpleEntry {
+		SimpleEntry(date: Date())
+	}
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
-        completion(entry)
-    }
+	func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+		let entry = SimpleEntry(date: Date())
+		completion(entry)
+	}
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+	func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+		Task {
+			do {
+				let fact = try await FactApi.fetchFact()
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
-        }
+				let entry = SimpleEntry(date: .now, fact: fact)
+				let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 15 * 60)))
+				completion(timeline)
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
+			} catch {
+				print(error.localizedDescription)
+			}
+		}
+	}
 }
 
 struct SimpleEntry: TimelineEntry {
-    let date: Date
+	let date: Date
 	var fact: String?
 }
 
 struct FactEntryView : View {
-    var entry: Provider.Entry
+	var entry: Provider.Entry
 
-    var body: some View {
+	var body: some View {
 		if let fact = entry.fact  {
 			Text(fact)
+				.multilineTextAlignment(.center)
+				.padding(.horizontal)
+				.accessibilityLabel(fact)
 		}
-    }
+	}
 }
 
 struct Fact: Widget {
-    let kind: String = "Fact"
+	let kind: String = "Fact"
 
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            FactEntryView(entry: entry)
-        }
-        .configurationDisplayName("Factz widget")
-        .description("Daily fact about date on your widget.")
-    }
+	var body: some WidgetConfiguration {
+		StaticConfiguration(kind: kind, provider: Provider()) { entry in
+			FactEntryView(entry: entry)
+		}
+		.configurationDisplayName("Factz widget")
+		.description("Daily historical fact about date on your widget.")
+		.supportedFamilies([.systemMedium])
+	}
 }
 
 struct Fact_Previews: PreviewProvider {
-    static var previews: some View {
-        FactEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
+	static var previews: some View {
+		FactEntryView(entry: SimpleEntry(date: Date()))
+			.previewContext(WidgetPreviewContext(family: .systemSmall))
+	}
 }
