@@ -12,6 +12,7 @@
 		3C34090E293C974F0048F155 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C34090D293C974F0048F155 /* Preview Assets.xcassets */; };
 		3C340917293C990C0048F155 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340916293C990C0048F155 /* FactViewModel.swift */; };
 		3C340919293CA0CE0048F155 /* FactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340918293CA0CE0048F155 /* FactView.swift */; };
+		3C34091D293CD05B0048F155 /* FactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34091C293CD05B0048F155 /* FactAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3C34090D293C974F0048F155 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C340916293C990C0048F155 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		3C340918293CA0CE0048F155 /* FactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactView.swift; sourceTree = "<group>"; };
+		3C34091C293CD05B0048F155 /* FactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				3C340906293C974E0048F155 /* FactzApp.swift */,
 				3C340918293CA0CE0048F155 /* FactView.swift */,
 				3C340916293C990C0048F155 /* FactViewModel.swift */,
+				3C34091C293CD05B0048F155 /* FactAPI.swift */,
 				3C34090A293C974F0048F155 /* Assets.xcassets */,
 				3C34090C293C974F0048F155 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C34091D293CD05B0048F155 /* FactAPI.swift in Sources */,
 				3C340919293CA0CE0048F155 /* FactView.swift in Sources */,
 				3C340917293C990C0048F155 /* FactViewModel.swift in Sources */,
 				3C340907293C974E0048F155 /* FactzApp.swift in Sources */,

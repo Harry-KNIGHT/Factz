@@ -11,20 +11,18 @@ struct FactView: View {
 	@EnvironmentObject var factVM: FactViewModel
 	var body: some View {
 		VStack {
-			if let fact = factVM.fact {
-				Text(fact)
-					.multilineTextAlignment(.center)
+			if factVM.fact == nil {
+				ProgressView()
+			} else {
+				if let fact = factVM.fact {
+					Text(fact)
+						.multilineTextAlignment(.center)
+				}
 			}
 		}
 		.padding()
 		.onAppear {
-			Task {
-				do {
-					try factVM.fetchFact()
-				} catch {
-					throw error
-				}
-			}
+			factVM.getFact()
 		}
 	}
 }

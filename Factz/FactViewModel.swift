@@ -10,18 +10,13 @@ import Foundation
 final class FactViewModel: ObservableObject {
 	@Published var fact: String? = nil
 
-	func fetchFact() throws {
-		let factURL = "https://numbersapi.p.rapidapi.com/6/21/date/?rapidapi-key=272c22cc63msh3b43f346044bf33p1068aajsne078e6aff743"
-		if let url = URL(string: factURL) {
+	@MainActor func getFact() {
+		Task {
 			do {
-				let contents = try String(contentsOf: url)
-				self.fact = contents
+				fact = try await FactApi.fetchFact()
 			} catch {
 				throw error
 			}
 		}
 	}
 }
-
-
-
