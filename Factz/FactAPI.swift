@@ -8,10 +8,15 @@
 import Foundation
 
 struct FactApi {
-	enum ApiError: Error { case outOfBounds, badResponse, urlNotFound }
+	enum ApiError: Error { case outOfBounds, badResponse, urlNotFound, noDate }
 
 	static func fetchFact() async throws -> String {
-		let factURL = "https://numbersapi.p.rapidapi.com/6/21/date/?rapidapi-key=272c22cc63msh3b43f346044bf33p1068aajsne078e6aff743"
+		let date = Date()
+		let calendar = Calendar.current
+		let components = calendar.dateComponents([.day, .month], from: date)
+		guard let day = components.day, let month = components.month else { throw ApiError.noDate }
+
+		let factURL = "https://numbersapi.p.rapidapi.com/\(month)/\(day)/date/?rapidapi-key=272c22cc63msh3b43f346044bf33p1068aajsne078e6aff743"
 
 		guard let url = URL(string: factURL) else { throw ApiError.urlNotFound }
 
